@@ -94,17 +94,22 @@
       }
       .max-w-4xl {
         padding: 1.5rem;
+        max-width: 100%;
+        width: 100%;
       }
       .container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 100%;
       }
       .grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
       }
       .project-card {
         margin-bottom: 1.5rem;
+        width: 100%;
+        max-width: none;
       }
       h1.code-font {
         font-size: 2rem;
@@ -128,13 +133,18 @@
       }
       .max-w-4xl {
         padding: 0.5rem;
+        max-width: 100%;
+        width: 100%;
       }
       .container {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 100%;
       }
       .project-card {
         margin-bottom: 1rem;
+        width: 100%;
+        max-width: none;
       }
       h1.code-font {
         font-size: 1.5rem;
@@ -146,10 +156,29 @@
       }
       .grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2rem;
       }
       .project-card img {
         height: 200px;
+      }
+    }
+    @media (min-width: 1025px) {
+      .max-w-4xl {
+        max-width: 100%;
+        width: 100%;
+      }
+      .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        max-width: 100%;
+      }
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 3rem;
+      }
+      .project-card {
+        width: 100%;
+        max-width: none;
       }
     }
   </style>
@@ -202,7 +231,7 @@
 
     <!-- Main Content -->
     <main id="mainContent" class="container mx-auto px-6 py-8">
-      <div class="max-w-4xl mx-auto text-center">
+      <div class="w-full mx-auto text-center">
         <h1 class="code-font text-4xl md:text-5xl mb-4 text-gray-800">
           const name = "James";
         </h1>
@@ -214,93 +243,103 @@
           </a>
         </div>
 
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- E-commerce Platform -->
-          <article class="project-card">
-            <div class="w-full h-48 overflow-hidden bg-gray-100">
-              <img 
-                src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="E-commerce Platform Dashboard" 
-                class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/400x200?text=E-commerce+Platform';this.onerror=null;">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
-              <p class="text-gray-600 mb-4">A full-featured e-commerce platform with product management, shopping cart, and secure payment processing. Includes admin dashboard for inventory management.</p>
-              <div class="text-sm text-gray-500 mb-4">React, Node.js, MongoDB, Stripe API</div>
-              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
-            </div>
-          </article>
+        <!-- Projects Section with Milk Background -->
+        <div class="bg-[#fafafa] w-screen -ml-[50vw] -mr-[50vw] -mb-8 pb-8 pt-8" style="margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%);">
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[80%] mx-auto">
+            <!-- E-commerce Platform -->
+            <article class="project-card">
+              <div class="w-full h-48 overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="E-commerce Platform Dashboard" 
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://via.placeholder.com/400x200?text=E-commerce+Platform';this.onerror=null;">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                <p class="text-gray-600 mb-4">A full-featured e-commerce platform with product management, shopping cart, and secure payment processing. Includes admin dashboard for inventory management.</p>
+                <div class="text-sm text-gray-500 mb-4">React, Node.js, MongoDB, Stripe API</div>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+              </div>
+            </article>
 
-          <!-- Task Management App -->
-          <article class="project-card">
-            <div class="w-full h-48 overflow-hidden bg-gray-100">
-              <img 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Task Management Dashboard" 
-                class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/400x200?text=Task+Manager';this.onerror=null;">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
-              <p class="text-gray-600 mb-4">A collaborative task management application with real-time updates, team assignments, and progress tracking. Features drag-and-drop interface and deadline notifications.</p>
-              <div class="text-sm text-gray-500 mb-4">Vue.js, Firebase, Tailwind CSS</div>
-              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
-            </div>
-          </article>
+            <!-- Task Management App -->
+            <article class="project-card">
+              <div class="w-full h-48 overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Task Management Dashboard" 
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://via.placeholder.com/400x200?text=Task+Manager';this.onerror=null;">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                <p class="text-gray-600 mb-4">A collaborative task management application with real-time updates, team assignments, and progress tracking. Features drag-and-drop interface and deadline notifications.</p>
+                <div class="text-sm text-gray-500 mb-4">Vue.js, Firebase, Tailwind CSS</div>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+              </div>
+            </article>
 
-          <!-- Real-Time Financial Stock Data Pipeline -->
-          <article class="project-card">
-            <div class="w-full h-48 overflow-hidden bg-gray-100">
-              <img 
-                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Financial Stock Data Dashboard" 
-                class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/400x200?text=Stock+Data+Pipeline';this.onerror=null;">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Real-Time Financial Stock Data Pipeline</h3>
-              <p class="text-gray-600 mb-4">A robust data pipeline system that processes real-time stock market data using Kafka for streaming, Airflow for orchestration, and Python for data processing. Features an interactive dashboard for data visualization and analysis.</p>
-              <div class="text-sm text-gray-500 mb-4">Python, Kafka, Airflow, PostgreSQL, React</div>
-              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
-            </div>
-          </article>
+            <!-- Real-Time Financial Stock Data Pipeline -->
+            <article class="project-card">
+              <div class="w-full h-48 overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Financial Stock Data Dashboard" 
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://via.placeholder.com/400x200?text=Stock+Data+Pipeline';this.onerror=null;">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Real-Time Financial Stock Data Pipeline</h3>
+                <p class="text-gray-600 mb-4">A robust data pipeline system that processes real-time stock market data using Kafka for streaming, Airflow for orchestration, and Python for data processing. Features an interactive dashboard for data visualization and analysis.</p>
+                <div class="text-sm text-gray-500 mb-4">Python, Kafka, Airflow, PostgreSQL, React</div>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+              </div>
+            </article>
 
-          <!-- AI-Powered Content Recommendation System -->
-          <article class="project-card">
-            <div class="w-full h-48 overflow-hidden bg-gray-100">
-              <img 
-                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="AI Content Recommendation Dashboard" 
-                class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/400x200?text=AI+Recommendation';this.onerror=null;">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">AI-Powered Content Recommendation System</h3>
-              <p class="text-gray-600 mb-4">An intelligent content recommendation engine that uses machine learning to analyze user behavior and preferences. Implements collaborative filtering and content-based filtering algorithms for personalized recommendations.</p>
-              <div class="text-sm text-gray-500 mb-4">Python, TensorFlow, Scikit-learn, FastAPI, Redis</div>
-              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
-            </div>
-          </article>
+            <!-- AI-Powered Content Recommendation System -->
+            <article class="project-card">
+              <div class="w-full h-48 overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="AI Content Recommendation Dashboard" 
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://via.placeholder.com/400x200?text=AI+Recommendation';this.onerror=null;">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">AI-Powered Content Recommendation System</h3>
+                <p class="text-gray-600 mb-4">An intelligent content recommendation engine that uses machine learning to analyze user behavior and preferences. Implements collaborative filtering and content-based filtering algorithms for personalized recommendations.</p>
+                <div class="text-sm text-gray-500 mb-4">Python, TensorFlow, Scikit-learn, FastAPI, Redis</div>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+              </div>
+            </article>
 
-          <!-- AI Stock Trading Agent -->
-          <article class="project-card">
-            <div class="w-full h-48 overflow-hidden bg-gray-100">
-              <img 
-                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="AI Stock Trading Dashboard" 
-                class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/400x200?text=AI+Stock+Trading';this.onerror=null;">
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">AI Stock Trading Agent</h3>
-              <p class="text-gray-600 mb-4">An intelligent trading system that uses reinforcement learning to analyze market patterns and execute trades. Features real-time market data analysis, risk management, and automated trading strategies with backtesting capabilities.</p>
-              <div class="text-sm text-gray-500 mb-4">Python, TensorFlow, Reinforcement Learning, Alpaca API, PostgreSQL</div>
-              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
-            </div>
-          </article>
+            <!-- AI Stock Trading Agent -->
+            <article class="project-card">
+              <div class="w-full h-48 overflow-hidden bg-gray-100">
+                <img 
+                  src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="AI Stock Trading Dashboard" 
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://via.placeholder.com/400x200?text=AI+Stock+Trading';this.onerror=null;">
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">AI Stock Trading Agent</h3>
+                <p class="text-gray-600 mb-4">An intelligent trading system that uses reinforcement learning to analyze market patterns and execute trades. Features real-time market data analysis, risk management, and automated trading strategies with backtesting capabilities.</p>
+                <div class="text-sm text-gray-500 mb-4">Python, TensorFlow, Reinforcement Learning, Alpaca API, PostgreSQL</div>
+                <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+              </div>
+            </article>
+          </div>
         </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-opacity duration-300 opacity-100 visible" aria-label="Back to top" style="z-index:50;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
       </div>
     </main>
   </div>
@@ -314,6 +353,27 @@
     menuButton.addEventListener('click', () => {
       menuContent.classList.toggle('active');
       mainContent.classList.toggle('menu-open');
+    });
+
+    // Back to Top functionality
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+        backToTopButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   </script>
 </body>
