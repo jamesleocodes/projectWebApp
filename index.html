@@ -71,6 +71,7 @@
     .max-w-4xl {
       position: relative;
       z-index: 15;
+      padding: 1rem;
     }
     .project-card {
       background: white;
@@ -82,6 +83,40 @@
     .project-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    @media (max-width: 640px) {
+      .menu-content {
+        height: auto;
+        min-height: 250px;
+      }
+      main.menu-open {
+        margin-top: 350px;
+      }
+      .max-w-4xl {
+        padding: 0.5rem;
+      }
+      .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .project-card {
+        margin-bottom: 1rem;
+      }
+      h1.code-font {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .text-xl {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .project-card img {
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -194,6 +229,40 @@
               <h3 class="text-xl font-semibold mb-2">Real-Time Financial Stock Data Pipeline</h3>
               <p class="text-gray-600 mb-4">A robust data pipeline system that processes real-time stock market data using Kafka for streaming, Airflow for orchestration, and Python for data processing. Features an interactive dashboard for data visualization and analysis.</p>
               <div class="text-sm text-gray-500 mb-4">Python, Kafka, Airflow, PostgreSQL, React</div>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+            </div>
+          </article>
+
+          <!-- AI-Powered Content Recommendation System -->
+          <article class="project-card">
+            <div class="w-full h-48 overflow-hidden bg-gray-100">
+              <img 
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="AI Content Recommendation Dashboard" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://via.placeholder.com/400x200?text=AI+Recommendation';this.onerror=null;">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">AI-Powered Content Recommendation System</h3>
+              <p class="text-gray-600 mb-4">An intelligent content recommendation engine that uses machine learning to analyze user behavior and preferences. Implements collaborative filtering and content-based filtering algorithms for personalized recommendations.</p>
+              <div class="text-sm text-gray-500 mb-4">Python, TensorFlow, Scikit-learn, FastAPI, Redis</div>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
+            </div>
+          </article>
+
+          <!-- AI Stock Trading Agent -->
+          <article class="project-card">
+            <div class="w-full h-48 overflow-hidden bg-gray-100">
+              <img 
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="AI Stock Trading Dashboard" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://via.placeholder.com/400x200?text=AI+Stock+Trading';this.onerror=null;">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">AI Stock Trading Agent</h3>
+              <p class="text-gray-600 mb-4">An intelligent trading system that uses reinforcement learning to analyze market patterns and execute trades. Features real-time market data analysis, risk management, and automated trading strategies with backtesting capabilities.</p>
+              <div class="text-sm text-gray-500 mb-4">Python, TensorFlow, Reinforcement Learning, Alpaca API, PostgreSQL</div>
               <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
             </div>
           </article>
