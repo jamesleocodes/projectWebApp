@@ -47,11 +47,11 @@
       backface-visibility: hidden;
     }
     main {
-      transition: padding-top 0.3s ease-in-out;
+      transition: margin-top 0.3s ease-in-out;
       background-color: white;
       position: relative;
       z-index: 5;
-      padding-top: 4rem;
+      margin-top: 4rem;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       -webkit-perspective: 1000;
@@ -60,13 +60,17 @@
       -moz-osx-font-smoothing: grayscale;
     }
     main.menu-open {
-      padding-top: 300px;
+      margin-top: 300px;
     }
     .content-wrapper {
       position: relative;
       overflow: visible;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
+    }
+    .max-w-4xl {
+      position: relative;
+      z-index: 15;
     }
     .project-card {
       background: white;
