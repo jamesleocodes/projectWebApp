@@ -6,7 +6,7 @@
   <meta name="description" content="James - Software Developer Portfolio">
   <meta name="keywords" content="portfolio, software development, James">
   <meta name="author" content="James">
-  <title>Myo Zaw Win - Software Developer</title>
+  <title>James - Software Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -27,6 +27,10 @@
       transform: translateY(-100%);
       transition: transform 0.3s ease-in-out;
       z-index: 10;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      perspective: 1000;
     }
     .menu-content.active {
       transform: translateY(0);
@@ -39,6 +43,8 @@
       top: 0;
       left: 0;
       z-index: 20;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
     main {
       transition: padding-top 0.3s ease-in-out;
@@ -46,6 +52,12 @@
       position: relative;
       z-index: 5;
       padding-top: 4rem;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-perspective: 1000;
+      perspective: 1000;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     main.menu-open {
       padding-top: 300px;
@@ -53,6 +65,8 @@
     .content-wrapper {
       position: relative;
       overflow: visible;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
     .project-card {
       background: white;
@@ -163,19 +177,19 @@
             </div>
           </article>
 
-          <!-- Health & Fitness Tracker -->
+          <!-- Real-Time Financial Stock Data Pipeline -->
           <article class="project-card">
             <div class="w-full h-48 overflow-hidden bg-gray-100">
               <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Fitness Tracker Dashboard" 
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="Financial Stock Data Dashboard" 
                 class="w-full h-full object-cover"
-                onerror="this.src='https://via.placeholder.com/400x200?text=Fitness+Tracker';this.onerror=null;">
+                onerror="this.src='https://via.placeholder.com/400x200?text=Stock+Data+Pipeline';this.onerror=null;">
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Health & Fitness Tracker</h3>
-              <p class="text-gray-600 mb-4">A comprehensive health tracking application that monitors workouts, nutrition, and sleep patterns. Includes data visualization and personalized recommendations.</p>
-              <div class="text-sm text-gray-500 mb-4">React Native, GraphQL, PostgreSQL</div>
+              <h3 class="text-xl font-semibold mb-2">Real-Time Financial Stock Data Pipeline</h3>
+              <p class="text-gray-600 mb-4">A robust data pipeline system that processes real-time stock market data using Kafka for streaming, Airflow for orchestration, and Python for data processing. Features an interactive dashboard for data visualization and analysis.</p>
+              <div class="text-sm text-gray-500 mb-4">Python, Kafka, Airflow, PostgreSQL, React</div>
               <a href="#" class="text-blue-600 font-semibold hover:underline">View</a>
             </div>
           </article>
