@@ -84,6 +84,40 @@
       transform: translateY(-4px);
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .menu-content {
+        height: auto;
+        min-height: 250px;
+      }
+      main.menu-open {
+        margin-top: 400px;
+      }
+      .max-w-4xl {
+        padding: 1.5rem;
+      }
+      .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .project-card {
+        margin-bottom: 1.5rem;
+      }
+      h1.code-font {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+      .project-card img {
+        height: 220px;
+      }
+    }
     @media (max-width: 640px) {
       .menu-content {
         height: auto;
