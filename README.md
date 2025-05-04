@@ -34,7 +34,3 @@ To run this project locally:
 ## Contact
 
 Feel free to reach out through the contact information provided on the website.
-
-## License
-
-This project is open source and available under the MIT License. 
